@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luqman Portofolio</title>
+    <meta name="description" content="Portofolio Luqman Hakim, pengembang website Laravel dan MySQL lulusan Teknologi Rekayasa Multimedia, Politeknik Negeri Batam.">
+    <meta name="author" content="Luqman Hakim">
+    <meta name="theme-color" content="#0a0604">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Luqman Portofolio">
+    <meta property="og:description" content="Portofolio Luqman Hakim, pengembang website Laravel dan MySQL.">
+    <meta property="og:image" content="https://USERNAME.github.io/images/og.jpg">
+    <meta property="og:url" content="https://USERNAME.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <noscript><style>.loader{display:none}</style></noscript>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/scroll.css">
+</head>
+<body>
+
+    <noscript>
+        <div style="position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;background:#0a0604;color:#f3e9d6;font-family:'Cinzel',serif">
+            <h1 style="font-size:1.6rem;margin:0">Luqman Portofolio</h1>
+            <p style="margin:0;opacity:.8">Aktifkan JavaScript di browser kamu untuk melihat website ini.</p>
+        </div>
+    </noscript>
+
+
+    <div class="loader" id="loader">
+        <p class="loader-title">Website Sedang Dimuat</p>
+        <div class="loader-bar"><span id="loader-fill"></span></div>
+        <p class="loader-text" id="loader-text">Memuat 0%</p>
+        <div class="loader-enter" id="loader-enter" hidden>
+            <button type="button" class="loader-btn" id="loader-go">Mulai</button>
+            <button type="button" class="loader-skip" id="loader-skip">Tanpa suara</button>
+        </div>
+    </div>
+
+    <nav class="nav" id="nav">
+        <a class="nav-logo" href="#" data-goto="0">
+            <img src="/images/logome.png" alt="Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <span class="nav-logo-text">Luqman</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="#" data-goto="0">Beranda</a>
+            <a href="#" data-goto="0.4655">Tentang</a>
+            <a href="#" data-goto="1" data-page="0">Portofolio</a>
+            <a href="#" data-goto="1" data-page="last">Kontak</a>
+        </div>
+        <button type="button" class="sound-btn is-muted" id="sound-btn" aria-label="Nyalakan musik" aria-pressed="false" title="Musik">
+            <svg class="ico-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4z"/><path d="M15.5 9a4.5 4.5 0 0 1 0 6"/><path d="M18 6.5a8 8 0 0 1 0 11"/></svg>
+            <svg class="ico-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>
+        </button>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="rail" aria-label="Posisi scroll">
+        <div class="rail-track"></div>
+        <div class="rail-fill" id="rail-fill"></div>
+        <a href="#" class="rail-dot" data-goto="0"    style="top:0%"><span>I</span></a>
+        <a href="#" class="rail-dot" data-goto="0.4655" style="top:46.55%"><span>II</span></a>
+        <a href="#" class="rail-dot" data-goto="1"    style="top:100%"><span>III</span></a>
+    </div>
+
+    <div class="scroll-hint" id="scroll-hint">Scroll <span>↓</span></div>
+
+    <main class="scroll-area" id="scroll-area">
+        <div class="stage">
+            <canvas id="canvas"></canvas>
+            <div class="book-ui" id="book-ui">
+                <div class="book-waves book-waves--l" aria-hidden="true"></div>
+                <div class="book-waves book-waves--r" aria-hidden="true"></div>
+                <div class="book-text">
+                    <span class="book-kicker" id="book-kicker"></span>
+                    <h3 id="book-title"></h3>
+                    <p id="book-text"></p>
+                </div>
+                <figure class="book-fig" id="book-fig">
+                    <img id="book-img" alt="">
+                    <span class="book-ph">Taruh gambar di sini</span>
+                </figure>
+                <button type="button" class="book-btn book-prev" id="book-prev" aria-label="Sebelumnya" title="Sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+                <button type="button" class="book-btn book-next" id="book-next" aria-label="Selanjutnya" title="Selanjutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
+            <section class="copy" data-start="0" data-end="0.12">
+                <span class="eyebrow">Selamat Datang</span>
+                <h1>Di Website Portofolio Luqman</h1>
+                <p>Website ini menampilkan informasi dan portofolio saya yang dikembangkan dengan bantuan AI.</p>
+            </section>
+            <section class="copy copy--wall" data-start="0.43" data-end="0.51">
+                <span class="eyebrow">Pendiri</span>
+                <h2>Luqman Hakim</h2>
+                <p>Seorang pengembang website yang memiliki pengalaman menggunakan Laravel dan MySQL dengan memanfaatkan AI untuk mendukung proses pengembangan.</p>
+                <a class="btn-cv" href="/files/CV-Luqman-Hakim.pdf" download>Unduh CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+            </section>
+        </div>
+    </main>
+    <template id="book-pages">
+        <article data-img="/images/1.png">
+            <small>WEBSITE</small>
+            <h3>Cari Kopi</h3>
+            <p>Website ini merupakan website yang memungkinkan pengguna untuk mencari dan menemukan informasi mengenai toko kopi beserta produknya. Website ini dikembangkan sebagai bagian dari Project-Based Learning (PBL) di kampus.</p>
+            <a data-action href="https://github.com/USERNAME/cari-kopi">Lihat Proyek</a>
+        </article>
+        <article data-img="/images/2.png">
+            <small>WEBSITE</small>
+            <h3>Company Profile</h3>
+            <p>Website ini merupakan website yang digunakan untuk menampilkan informasi tentang profil, layanan, portofolio, dan kontak perusahaan. Website ini dikembangkan sebagai bagian dari projek selama kegiatan magang.</p>
+            <a data-action href="https://github.com/USERNAME/company-profile">Lihat Proyek</a>
+        </article>
+        <article data-img="/images/3.png">
+            <small>KONTAK</small>
+            <h3>Anda Dapat Menghubungi Saya Melalui:</h3>
+            <p>
+                <a data-icon="linkedin" href="https://linkedin.com/in/USERNAME">Luqman Hakim</a>
+                <a data-icon="github" href="https://github.com/USERNAME">USERNAME</a>
+                <a data-icon="phone" href="tel:+628123456789">08xx-xxxx-xxxx</a>
+                <a data-icon="email" href="mailto:luqman@gmail.com">xxx@gmail.com</a>
+            </p>
+        </article>
+    </template>
+
+    <script src="/js/scroll-sequence.js"></script>
+</body>
+</html>
