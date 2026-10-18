@@ -1089,3 +1089,43 @@ body {
         bottom: 6vh;
     }
 }
+
+/* HP: ukuran teks dikecilkan sedikit supaya kartu lebih ringkas dan tombol tidak terpotong */
+@media (max-width: 720px) {
+    .eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 0.28em;
+        margin-bottom: 10px;
+    }
+    .copy h1,
+    .copy h2 {
+        font-size: clamp(1.7rem, 7.6vw, 2.2rem);
+    }
+    .copy p {
+        margin-top: 12px;
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+    .copy .btn-cv {
+        margin-top: 14px;
+        padding: 8px 18px;
+        font-size: 0.72rem;
+    }
+    .book-kicker {
+        font-size: 0.62rem;
+        margin-bottom: 6px;
+    }
+    .book-text h3 {
+        font-size: clamp(1.05rem, 4.6vw, 1.4rem);
+    }
+    .book-text p {
+        margin-top: 6px;
+        font-size: clamp(0.74rem, 3.1vw, 0.88rem);
+        line-height: 1.45;
+    }
+    .book-text .book-action {
+        margin-top: 12px;
+        padding: 7px 16px;
+        font-size: 0.68rem;
+    }
+}
