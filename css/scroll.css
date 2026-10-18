@@ -1129,3 +1129,35 @@ body {
         font-size: 0.68rem;
     }
 }
+
+/* HP, halaman Kontak: logo disusun 2 kolom dan dipadatkan supaya semuanya muat di kartu tanpa harus digeser */
+@media (max-width: 720px), (max-aspect-ratio: 1 / 1) {
+    .book-text #book-text.has-contacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 12px;
+        margin-top: 10px;
+    }
+    .book-text #book-text.has-contacts .contact-link,
+    .book-text #book-text.has-contacts .contact-link:first-child {
+        margin-top: 0 !important;
+        gap: 8px !important;
+        width: auto !important;
+        min-width: 0;
+    }
+    .book-text #book-text.has-contacts .contact-ico {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .book-text #book-text.has-contacts .contact-ico svg {
+        width: 15px;
+        height: 15px;
+    }
+    .book-text #book-text.has-contacts .contact-label {
+        min-width: 0;
+        font-size: 0.66rem;
+        line-height: 1.25;
+        letter-spacing: 0.02em;
+        overflow-wrap: anywhere;
+    }
+}
